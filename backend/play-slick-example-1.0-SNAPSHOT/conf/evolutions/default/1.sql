@@ -1,0 +1,12 @@
+# --- !Ups
+
+CREATE TABLE people
+(
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  name VARCHAR(300) NOT NULL,
+  age INT NOT NULL
+);
+
+# --- !Downs
+
+DROP TABLE IF EXISTS people;

@@ -1,0 +1,29 @@
+<link rel="stylesheet"
+      href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+<div class="jumbotron">
+  <div>
+    <h2>Name : {{ _name }}, Age : {{ _age }}</h2>
+
+    <div class="form-group">
+    <div>name</div>
+      <input type="text" [(ngModel)]="_name" class="form-control">
+    </div>
+
+    <div class="form-group">
+    <div>age</div>
+      <input type="number" [(ngModel)]="_age" class="form-control">
+    </div>
+
+    <div class="form-group text-center">
+      <button (click)="onSubmit()" class="btn btn-success">Save</button>
+    </div>
+  </div>
+
+</div>
+
+<div *ngFor="let person of persons[0]">
+  {{person.id}}
+  {{person.name}}
+  {{person.age}}
+</div>
